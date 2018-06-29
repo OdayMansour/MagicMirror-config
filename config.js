@@ -21,21 +21,17 @@ var config = {
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
-	language: "en",
+	language: "fr",
 	timeFormat: 24,
 	units: "metric",
 
 	modules: [
 		{
-			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
-		},
-		{
 			module: "clock",
-			position: "top_left"
+			position: "top_center",
+			config: {
+				displaySeconds: false
+			}
 		},
 		{
 			module: "currentweather",
@@ -43,7 +39,9 @@ var config = {
 			config: {
 				location: "Paris",
 				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "9bd13945da22f4e3659f2f84cd5bcfad"
+				appid: "9bd13945da22f4e3659f2f84cd5bcfad",
+				roundTemp: true,
+				onlyTemp: true
 			}
 		},
 		{
@@ -54,7 +52,12 @@ var config = {
 				location: "Paris",
 				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
 				appid: "9bd13945da22f4e3659f2f84cd5bcfad",
-				fade: false
+				fade: false,
+				maxNumberOfDays: 3,
+				lang: "fr",
+				roundTemp: true,
+				appendLocationNameToHeader: false,
+				colored: true
 			}
 		},
 	]
@@ -63,3 +66,4 @@ var config = {
 
 /*************** DO NOT EDIT THE LINE BELOW ***************/
 if (typeof module !== "undefined") {module.exports = config;}
+

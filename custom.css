@@ -10,9 +10,19 @@
  *****************************************************/
 
 body {
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .thin, .light, .regular, .bold, header {
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.weatherforecast .module-header {
+    display: none;
+}
+
+.clock .module-content .large {
+    font-size: 128px;
+    line-height: 128px;
+}
+
