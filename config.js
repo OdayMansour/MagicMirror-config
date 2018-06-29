@@ -15,7 +15,7 @@ var config = {
 	                      // - "", "0.0.0.0", "::" to listen on any interface
 	                      // Default, when address config is left out, is "localhost"
 	port: 1717,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1", "90.22.128.227"], // Set [] to allow all IP addresses
+	ipWhitelist: ["128.0.0.1", "::ffff:127.0.0.1", "::1", "90.22.128.227", "159.50.174.36"], // Set [] to allow all IP addresses
 	                                                       // or add a specific IPv4 of 192.168.1.5 :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
@@ -38,29 +38,12 @@ var config = {
 			position: "top_left"
 		},
 		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check-o ",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				]
-			}
-		},
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
 			module: "currentweather",
 			position: "top_right",
 			config: {
-				location: "New York",
+				location: "Paris",
 				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				appid: "9bd13945da22f4e3659f2f84cd5bcfad"
 			}
 		},
 		{
@@ -68,23 +51,10 @@ var config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
+				location: "Paris",
+				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
+				appid: "9bd13945da22f4e3659f2f84cd5bcfad",
+				fade: false
 			}
 		},
 	]
